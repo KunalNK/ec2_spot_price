@@ -20,7 +20,7 @@ dic=prices['SpotPriceHistory']
 az_to_price_dict={}
 with open('price.csv', 'w', newline='') as f:
     thewriter = csv.writer(f)
-    thewriter.writerow(['Instancename','Availabilityzone','Spotprice'])
+    thewriter.writerow(['Instancename','Availabilityzone','Spotprice','LowestPrice'])
     for elements in dic:
         instaname=elements['InstanceType']
         az=elements['AvailabilityZone']
@@ -29,15 +29,20 @@ with open('price.csv', 'w', newline='') as f:
         
         az_to_price_dict[az]=spotprice
 
-            
+        print(az_to_price_dict)
+
+        lowestprice_az=( min(az_to_price_dict.items(), key=itemgetter(1)))
+
+        thewriter.writerow([instaname,az,spotprice,lowestprice_az])
         # print(spotprice)
 
         
 
-        thewriter.writerow([instaname,az,spotprice])
-print(az_to_price_dict)
+        
+    # print(az_to_price_dict)
 
-lowestprice_az=( min(az_to_price_dict.items(), key=itemgetter(1)))
+    # lowestprice_az=( min(az_to_price_dict.items(), key=itemgetter(1)))
+    
 # # print(lowprice)
 
 print("Lowest price of ec2 spot instance" + str(instance_name) + ':' + str(lowestprice_az))

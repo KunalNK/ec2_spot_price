@@ -1,4 +1,4 @@
-Instancename,Availabilityzone,Spotprice
-t3.medium,ap-south-1b,0.013400
-t3.medium,ap-south-1c,0.013500
-t3.medium,ap-south-1a,0.013400
+Instancename,Availabilityzone,Spotprice,LowestPrice
+t3.medium,ap-south-1b,0.013400,"('ap-south-1b', '0.013400')"
+t3.medium,ap-south-1c,0.013500,"('ap-south-1b', '0.013400')"
+t3.medium,ap-south-1a,0.013400,"('ap-south-1b', '0.013400')"
