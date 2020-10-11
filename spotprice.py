@@ -67,6 +67,7 @@ prices=client.describe_spot_price_history(StartTime=now,EndTime=now,InstanceType
 
 dic=prices['SpotPriceHistory']
 
+
 with open('abcprice.csv', 'a', newline='') as f:
     thewriter = csv.writer(f)
     thewriter.writerow(['Instancename','Availabilityzone1a(USD)','Availabilityzone1b(USD)','Availabilityzone1c(USD)','LowestPrice(USD)','DateTime'])

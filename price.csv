@@ -1,4 +1,4 @@
 Instancename,Availabilityzone,Spotprice,LowestPrice
-t3.medium,ap-south-1b,0.013400,"('ap-south-1b', '0.013400')"
-t3.medium,ap-south-1c,0.013500,"('ap-south-1b', '0.013400')"
-t3.medium,ap-south-1a,0.013400,"('ap-south-1b', '0.013400')"
+t2.micro,ap-south-1b,0.003700,"('ap-south-1b', '0.003700')"
+t2.micro,ap-south-1a,0.003700,"('ap-south-1b', '0.003700')"
+t2.micro,ap-south-1b,0.003700,"('ap-south-1b', '0.003700')"
