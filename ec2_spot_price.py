@@ -44,7 +44,7 @@ az_spot_data = getaz_spot(instance_name)
 print(az_spot_data)
 
 ############################ STEP-3 ########################################
-#Create a function to get cheapest az and its price
+#Create a function to get cheapest az and its spot price
 
 def get_lowaz_price(az_spot_data):
     lowestprice_az=( min(az_spot_data.items(), key=itemgetter(1)))
@@ -56,7 +56,7 @@ print("Cheapest AZ:", lowest_az)
 print("Lowest price:", price)
 
 ##########################  STEP-4 ############################################
-# Creation of spot ec2 instance
+# Creation of spot ec2 instance 
 
 def create_spot_instance(instance_name, lowest_az):
     response = client.request_spot_instances(
